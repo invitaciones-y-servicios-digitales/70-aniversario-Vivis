@@ -231,10 +231,17 @@
     </script>
 
 
- <button class="confirmar-asistencia animar">
-    Confirmar Asistencia
- </button>
+<button class="confirmar-asistencia animar" onclick="confirmarWhatsApp()">Confirmar Asistencia</button>
+<script>
+    function confirmarWhatsApp() {
+        const nombre = document.getElementById('nombre').textContent;
+        const invitados = document.getElementById('invitados').textContent;
+        const numero = "5215565375424"; // Número de WhatsApp en formato internacional sin espacios
+        const mensaje = encodeURIComponent(`Hola, soy ${nombre} y confirmo mi asistencia con ${invitados} personas.`);
 
+        window.location.href = `https://wa.me/${numero}?text=${mensaje}`;
+    }
+</script>
 
 
 
