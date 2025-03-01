@@ -163,13 +163,13 @@
         document.getElementById('invitados').textContent = invitados;
 
         // Generar dinámicamente la URL con el nombre para appweb.html
-        const appwebUrl = `appweb.html?nombre=${encodeURIComponent(nombre)}`;
+        const appwebUrl = `https://invitaciones-y-servicios-digitales.github.io/70-aniversario-Vivis/appweb.html?nombre=${encodeURIComponent(nombre)}`;
 
-        // Generar el código QR
-        const qrImg = document.getElementById("qr");
-        const qrBaseUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="; // API para generar QR
-        qrImg.src = `${qrBaseUrl}${encodeURIComponent(appwebUrl)}`;
-        qrImg.alt = `Código QR para ${nombre}`;
+ // Generar el código QR
+ const qrImg = document.getElementById("qr");
+    const qrBaseUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="; // API para generar QR
+    qrImg.src = `${qrBaseUrl}${encodeURIComponent(appwebUrl)}`;
+    qrImg.alt = `Código QR para ${nombre}`;
     </script>
     
     <script>
@@ -243,9 +243,104 @@
     }
 </script>
 
+<div class="contact-section">
+    <!-- Etiqueta antes de los botones de contacto -->
+    <h2>¿Estás interesado en que diseñemos tu invitación digital?</h2>
+    <p>Contáctanos para hacer realidad tus invitaciones personalizadas y más.</p>
+
+    <!-- Botones de contacto -->
+    <div class="buttons">
+        <div class="contact-button">
+            <!-- Botón de WhatsApp -->
+            <a href="https://wa.me/5215641005736" target="_blank">
+                <button class="whatsapp-button">
+                    <img src="whatsapp-logo.png" alt="WhatsApp">
+                    <label>Contáctame por WhatsApp</label>
+                </button>
+            </a>
+        </div>
+        <div class="contact-button">
+            <!-- Botón de correo electrónico -->
+            <a href="mailto:diegoarcosbx@gmail.com">
+                <button class="email-button">
+                    <img src="email-logo.png" alt="Correo electrónico">
+                    <label>Contáctame por correo</label>
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Animación para los botones de contacto
+    document.addEventListener("DOMContentLoaded", function () {
+        const botonesContacto = document.querySelectorAll(".contact-button");
+
+        botonesContacto.forEach((boton) => {
+            boton.classList.add("visible");
+        });
+    });
+</script>
+
+<style>
+    /* Estilos para la sección de contacto */
+    .contact-section {
+        text-align: center;
+        margin-top: 20px; /* Aún más compacto */
+    }
+
+    .contact-section h2 {
+        font-size: 14px; /* Texto aún más pequeño */
+        margin-bottom: 5px; /* Menos espacio debajo del título */
+        color: #555; /* Color más tenue */
+    }
+
+    .contact-section p {
+        font-size: 12px; /* Texto mucho más pequeño */
+        margin-bottom: 10px; /* Menos espacio debajo del párrafo */
+        color: #666; /* Color más tenue */
+    }
+
+    /* Estilos para los botones de contacto */
+    .contact-button {
+        margin: 5px; /* Menos margen entre los botones */
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .contact-button.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .whatsapp-button, .email-button {
+        background-color: #25d366;
+        color: white;
+        padding: 4px 8px; /* Botones más pequeños */
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 6px; /* Menos espacio entre el icono y el texto */
+        cursor: pointer;
+        border: none;
+        font-size: 12px; /* Texto aún más pequeño */
+    }
+
+    .whatsapp-button img, .email-button img {
+        width: 12px; /* Iconos más pequeños */
+        height: 12px; /* Iconos más pequeños */
+    }
+
+    .whatsapp-button:hover, .email-button:hover {
+        background-color: #128c7e;
+    }
+</style>
 
 
 
 
 </body>
 </html>
+
