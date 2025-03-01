@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            text-align: center;
+            padding: 20px;
+        }
+        .invitado {
+            margin-top: 50px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .nombre-invitado {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .numero-mesa {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="invitado animar">
+        <label class="nombre-invitado">¡Hola <span id="nombre"></span> gracias por tu valiosa asistencia!</label>
+        <label class="numero-mesa">La mesa que tenemos reservada para ti es <span id="mesa"></span>!</label>
+    </div> 
+
+    <script>
+        // Obtener el nombre desde la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('nombre') || 'Invitado';
+        document.getElementById('nombre').textContent = nombre;
+
+        // Asignar el número de mesa según el nombre
+        let mesa;
+        const asignarMesa = {
+            "Diego": 1,
+            "Claudia": 2,
+            "Ana": 3,
+            "Carlos": 4,
+            "Laura": 5,
+            // Añadir más nombres y mesas según sea necesario
+        };
+
+        // Si el nombre está en la lista, asignar el número de mesa correspondiente, de lo contrario, mostrar 'Desconocida'
+        mesa = asignarMesa[nombre] || "Desconocida";
+
+        document.getElementById('mesa').textContent = mesa;
+    </script>
+</body>
+</html>

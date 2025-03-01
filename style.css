@@ -1,0 +1,424 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+/* Encabezado */
+.encabezado {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: none;
+}
+
+.encabezado img {
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Imagen redondeada */
+.arreglo img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    transform: translateY(-20%);
+}
+
+/* Sección de invitado */
+.invitado {
+    background-image: url('fondo.png'); /* Cambia 'ruta-de-tu-imagen.jpg' por la ruta real */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    min-height: 400px; /* Ajusta según necesites */
+    width: 100%;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; 
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+}
+
+.invitado label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+
+.nombre-invitado {
+    font-weight: bold;
+    color: #9b7db9;
+    font-size: 40px;
+}
+.invitado .nombre-invitado {
+    font-size: 80px;
+}
+.invitado .texto-frase{
+    color: #744f9d;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400; /* O usa 100 si lo quieres aún más delgado */
+    font-style: normal;
+    max-width: 600px;
+    border: none;
+    border-radius: 10px;
+    letter-spacing: 0.5px; /* Opcional */
+     
+}
+
+
+/* Barra decorativa */
+.barra {
+    width: 100%;
+    height: 80px;
+    
+    background-color: #9b7db9;
+    margin: 0 auto 5%;
+}
+.qr-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    margin-top: 50px; /* Espacio superior */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#qr {
+    width: 150px; /* Tamaño del QR */
+    height: 150px; /* Tamaño del QR */
+    margin-bottom: 20px; /* Espacio entre el QR y el texto */
+    margin-top: 20px;
+}
+
+label {
+    font-size: 1.2em; /* Tamaño de la fuente del texto */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Estilo negrita para el texto */
+}
+
+.asistencia {
+    color: #744f9d;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; 
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Sección de la ubicación */
+.lugar1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    width: 80%; /* Ancho dinámico que se ajusta al dispositivo */
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.lugar1 .ceremonia {
+    font-weight: bold;
+    color: #9b7db9;
+    font-size: 2rem; /* Usa unidades relativas para escalar según la pantalla */
+    margin-bottom: 10px;
+}
+
+.lugar1 img {
+    width: 100%; /* Ocupa el ancho del contenedor padre */
+    max-width: 200px; /* Ancho máximo para mantener proporción */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.lugar1 label {
+    font-size: 1rem; /* Escalable en dispositivos */
+    display: block;
+    margin-bottom: 10px;
+    
+}
+
+.lugar1 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #744f9d;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px ;
+    cursor: pointer;
+    width: 100%; /* Botón ocupa todo el ancho disponible */
+    max-width: 300px; /* Limita el ancho en pantallas grandes */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+    margin-top: 10px; 
+
+}
+.lugar1 button label {
+    color: #fff;
+
+}
+
+.lugar1 button img {
+    width: 40px; /* Ajusta el tamaño del ícono */
+    height: auto;
+    margin-right: 10px;
+}
+.mesa{
+   
+        font-weight: bold;
+        color: #9b7db9;
+        font-size: 40px;
+    
+}
+
+
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .lugar1 {
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+        width: 90%; /* Aumenta el ancho para aprovechar el espacio */
+        margin: 10px auto; /* Ajusta el margen superior/inferior */
+    }
+
+    .lugar1 .ceremonia {
+        font-size: 1.5rem; /* Reduce el tamaño de la fuente en móviles */
+    }
+
+    .lugar1 img {
+        max-width: 150px; /* Reduce el tamaño máximo de la imagen */
+    }
+
+    .lugar1 button {
+        padding: 10px; /* Reduce el tamaño del botón */
+        max-width: 250px; /* Ajusta el ancho máximo en móviles */
+    }
+
+    .lugar1 button img {
+        width: 30px; /* Ajusta el ícono para móviles */
+    }
+}
+
+/* FOTOS */
+
+.slider {
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo según lo necesites */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    width: calc(100%); /* Automático según el número de imágenes */
+ /* Ajustado al número de imágenes (3 imágenes = 300%) */
+    transition: transform 1s ease-in-out;
+}
+
+.slides img {
+    width: 100%;
+    max-height: 800px; /* Ajusta la altura máxima */
+    object-fit: cover;  /* Evita la distorsión de las imágenes */
+    border-radius: 10px;
+}
+.sentence22 {
+    color: #744f9d;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; 
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+}
+.sentence {
+    color: #744f9d;
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal; 
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-image: url('regalos.png'); /* Cambia 'ruta-de-tu-imagen.jpg' por la ruta real */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el div */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    min-height: 100px; /* Ajusta según necesites */    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.sentence label {
+    color: #744f9d;
+    font-family: "Raleway", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sentence1  {
+    font-size: 10px;
+    color: #000000;
+    font-family: "Raleway", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Animaciones */
+.animar {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .arreglo img {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform: none;
+        margin: 20px auto;
+    }
+
+    .invitado {
+        padding: 15px;
+    }
+
+    .barra {
+        height: 60px;
+    }
+
+    .lugar1 img {
+        width: 200px;
+    }
+
+    .mesaRegalos button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .encabezado img {
+        max-width: 90%;
+    }
+
+    .invitado label {
+        font-size: 1rem;
+    }
+
+    .lugar1 img {
+        width: 180px;
+    }
+
+    .mesaRegalos button {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .mesaRegalos button img {
+        margin: 0 0 10px 0;
+    }
+}
+.buttons { 
+    display: flex; /* Activa Flexbox para alinear los elementos en línea */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre las imágenes */
+}
+
+.btt img {
+    height: 105px;
+    width: 105px;
+}
+
+.whatsapp {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra el contenido */
+    text-align: center;
+}
+
+.whatsapp img {
+    height: 60px;
+    width: 60px;
+}
+
+.whatsapp label {
+    margin: 0;
+    padding: 0;
+}
+
+    .cuentaRegresiva {
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #fce4ec;
+        padding: 10px;
+        border-radius: 8px;
+        display: inline-block;
+    }
+.animacion-texto {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animacion-texto.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.confirmar-asistencia {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4); /* Degradado rosa elegante */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 20px auto;
+}
+
+.confirmar-asistencia:hover {
+    background: linear-gradient(to right, #fad0c4, #ff9a9e);
+    transform: scale(1.05); /* Pequeño efecto de agrandamiento */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.confirmar-asistencia:active {
+    transform: scale(0.95);
+}

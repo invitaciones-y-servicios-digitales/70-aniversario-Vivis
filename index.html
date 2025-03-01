@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Cumpleaños Vivis</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN+Guides&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script>
+
+    <script>
+                    // Efecto confeti
+
+        window.onload = function() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        };
+    </script>
+    
+
+
+    <div class="encabezado animar">
+        <img class="Vvs animar" src="vivis3imagenes.png" alt="Imagen Vivis">
+    </div>
+    
+
+    <div class="invitado  ">
+        <label class="nombre-invitado deslizar">¡Hola, <span id="nombre"></span>!</label>
+        <label class="texto-frase animar">Hay momentos en la vida que imaginamos, soñamos y esperamos. Uno de esos momentos ha llegado.</label>
+        <label class="texto-frase animar">Tu presencia en mi cumpleaños 70 es muy importante para mí.</label>
+        <label class="texto-frase deslizar">Celebremos juntos el próximo</label>
+        <label class="texto-frase deslizar"> 24 de Mayo del 2025</label>
+        <label class="texto-frase animar">16:30 horas</label>
+    </div>
+
+    <div class="asistencia animar">
+        <span>Asistencia confirmada</span>
+        <br>
+        <span> <span id="invitados"></span> personas</span>
+    </div>
+
+    <div class="qr-section animar">
+        <label for="qr">Escanea este QR para ver tu invitación disponible:</label>
+        <img id="qr" src="" alt="QR Code">
+    </div>
+
+    <div class="barra animar"></div>
+
+    <div class="lugar1 deslizar">
+        <img src="ubi.png" class="deslizar" alt="">
+        <label for="" class="ceremonia deslizar">Nos vemos en...</label>
+        <label for="" class="ubi1">Loma larga 10, Progreso Industrial, Nicolás Romero, Edo de México</label>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Loma+larga+10,+Progreso+Industrial,+Nicolás+Romero,+Edo+de+México" target="_blank">
+            <button class="deslizar">
+                <img src="iconodemaps.png" alt="Mapa">
+                <label>Ver ruta</label>
+            </button>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Loma+Larga+10,+Progreso+Industrial,+Nicolás+Romero,+Edo+de+México" target="_blank">
+            <button class="ruta deslizar">
+                <img src="iconodemaps.png" alt="Mapa">
+                <label>Ver ubicación</label>
+            </button>
+        </a>
+    </div>
+
+    <div class="slider animar">
+        <div class="slides">
+            <img src="vivisActualidad.jpg" alt="Imagen 2">
+        </div>
+        <script>
+            // Slider automático
+            let index = 0;
+            const slides = document.querySelectorAll(".slides img");
+            
+            function changeSlide() {
+                index++;
+                if (index >= slides.length) {
+                    index = 0;
+                }
+                document.querySelector(".slides").style.transform = `translateX(${-index * 52}%)`;
+            }
+            
+            setInterval(changeSlide, 3000);  // Cambia cada 3 segundos
+        </script>
+    </div>
+
+    <div id="cuentaRegresiva" class="cuentaRegresiva"></div>
+
+    <script>
+       const eventoFecha = new Date("May 24, 2025 16:30:00").getTime();
+        
+        let cuentaRegresiva = setInterval(function() {
+            let ahora = new Date().getTime();
+            let tiempoRestante = eventoFecha - ahora;
+        
+            let dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
+            let horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
+            let segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+        
+            document.getElementById("cuentaRegresiva").innerHTML = `📅 Faltan: ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+        
+            if (tiempoRestante < 0) {
+                clearInterval(cuentaRegresiva);
+                document.getElementById("cuentaRegresiva").innerHTML = "¡El evento ha comenzado! 🎉";
+            }
+        }, 1000);
+        
+    </script>
+
+
+    <div class="sentence22 animar">
+        <span>Las personas especiales toman nuestras manos por un momento, pero nuestros corazones para siempre.</span>
+        <br>
+        <span>Acompáñanos a celebrar la maravillosa vida de alguien muy querido, cuyo amor y sabiduría iluminan nuestras vidas cada día</span>
+    </div>
+
+
+
+    <div class="regalos animar">
+        <label class="mesa deslizar">Mesa de Regalos</label>
+     
+    </div>
+    
+    <div class="sentence deslizar">
+        <label >Tu compañía en este día tan especial ya es un gran regalo, pero si te gustaría darme algo más, te invito a dejar una aportación en los sobres que estarán en la entrada del evento para mi viaje de cumpleaños.</label>
+    
+    </div>
+
+  <div class="buttons">
+
+    <div class="btt deslizar">
+        <img src="codigovestimenta.png" alt="">
+    </div>
+<div class="whatsapp animar">
+    <img src="whatsapp-logo.png" alt="">
+    <label for="" class="sentence1 deslizar">¿Dudas?</label>
+</div>
+  </div>
+    <script>
+    // Obtener el nombre desde la URL
+    const urlParams = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('nombre') || 'Invitado';
+        document.getElementById('nombre').textContent = nombre;
+
+        const urlParams1 = new URLSearchParams(window.location.search);
+        const invitados = urlParams.get('invitados') || '1';
+        document.getElementById('invitados').textContent = invitados;
+
+        // Generar dinámicamente la URL con el nombre para appweb.html
+        const appwebUrl = `appweb.html?nombre=${encodeURIComponent(nombre)}`;
+
+        // Generar el código QR
+        const qrImg = document.getElementById("qr");
+        const qrBaseUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="; // API para generar QR
+        qrImg.src = `${qrBaseUrl}${encodeURIComponent(appwebUrl)}`;
+        qrImg.alt = `Código QR para ${nombre}`;
+    </script>
+    
+    <script>
+        // Animación para los elementos con la clase deslizar
+        document.addEventListener("DOMContentLoaded", function () { 
+            const elementosDeslizar = document.querySelectorAll(".deslizar");
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    } else {
+                        entry.target.classList.remove("visible");
+                    }
+                });
+            });
+    
+            elementosDeslizar.forEach((elemento) => {
+                observer.observe(elemento);
+            });
+        });
+    </script>
+    
+    <style>
+        /* Estilos iniciales para los elementos */
+        .deslizar {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 0.6s ease-in-out;
+        }
+    
+        /* Cuando el elemento está visible, se aplica la animación */
+        .deslizar.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+    
+
+    <script>
+        // Animación para los elementos
+        document.addEventListener("DOMContentLoaded", function () { 
+            const elementosAnimar = document.querySelectorAll(".animar");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    } else {
+                        entry.target.classList.remove("visible");
+                    }
+                });
+            });
+
+            elementosAnimar.forEach((elemento) => {
+                observer.observe(elemento);
+            });
+        });
+    </script>
+
+
+ <button class="confirmar-asistencia animar">
+    Confirmar Asistencia
+ </button>
+
+
+
+
+
+
+</body>
+</html>
