@@ -236,12 +236,22 @@
     function confirmarWhatsApp() {
         const nombre = document.getElementById('nombre').textContent;
         const invitados = document.getElementById('invitados').textContent;
-        const numero = "5215565375424"; // Número de WhatsApp en formato internacional sin espacios
         const mensaje = encodeURIComponent(`Hola, soy ${nombre} y confirmo mi asistencia con ${invitados} personas.`);
+        
+        // Números de WhatsApp
+        const numero1 = "5215565375424";
+        const numero2 = "525565442499";
 
-        window.location.href = `https://wa.me/${numero}?text=${mensaje}`;
+        // Abrir primer número
+        window.open(`https://wa.me/${numero1}?text=${mensaje}`, '_blank');
+
+        // Abrir segundo número con un pequeño retraso para evitar bloqueo del navegador
+        setTimeout(() => {
+            window.open(`https://wa.me/${numero2}?text=${mensaje}`, '_blank');
+        }, 1000);
     }
 </script>
+
 
 <div class="contact-section">
     <!-- Etiqueta antes de los botones de contacto -->
